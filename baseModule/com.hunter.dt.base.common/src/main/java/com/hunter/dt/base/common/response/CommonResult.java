@@ -27,11 +27,8 @@ public class CommonResult implements Serializable {
         return result;
     }
 
-    public static CommonResult FAIL(Object data, String message){
+    public static CommonResult FAIL(String message){
         CommonResult result = new CommonResult();
-        if(!Objects.isNull(data)){
-            result.setData(data);
-        }
         result.setCode(ResultCode.FAIL.code);
         StringBuilder msg = new StringBuilder(ResultCode.FAIL.message);
         if(!StringUtils.isEmpty(message)){

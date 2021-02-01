@@ -22,13 +22,13 @@ public class GlobalExceptionControllerAdvice {
     @ExceptionHandler
     public CommonResult runtimeFailHandle(RuntimeException e){
         logger.error(e.getMessage(), e);
-        return CommonResult.FAIL(ResultCode.FAIL, e.getMessage());
+        return CommonResult.FAIL(e.getMessage());
     }
 
     @SuppressWarnings("rawtypes")
     @ExceptionHandler
     public CommonResult unknownHandle(Exception e) {
         logger.error(e.getMessage(), e);
-        return CommonResult.FAIL(ResultCode.FAIL, e.getMessage());
+        return CommonResult.FAIL(e.getMessage());
     }
 }

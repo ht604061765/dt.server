@@ -1,19 +1,19 @@
 package com.hunter.dt.base.common.enumerate;
 
 /**
- * 功能模块枚举.
+ * 性别枚举.
  * @author Hunter
  * @date 2020/08/19
  */
-public enum FunctionEnum {
+public enum SexEnum {
 
-    DEFAULT("DEFAULT"),
+    MAN("男"),
 
-    USER_MANAGER("USER_MANAGER");
+    WOMAN("女");
 
     private String name;
 
-    FunctionEnum(String name) {
+    SexEnum(String name) {
         this.name = name;
     }
 

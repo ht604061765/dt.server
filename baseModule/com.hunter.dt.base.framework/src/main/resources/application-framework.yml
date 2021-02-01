@@ -1,0 +1,44 @@
+# 通用数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dt?charset=utf8mb4&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  redis:
+    host: 106.55.33.186
+    port: 9999
+    password: egjA35HTQXJtIcWZ
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+      lettuce:
+        shutdown-timeout: 0
+  hikari: # 数据库连接池
+    minimum-idle: 5 # 连接池空闲连接的最小数量
+    idle-timeout: 180000 # 空闲连接存活最大时间，默认600000（10分钟）
+    maximum-pool-size: 10 # 连接池最大连接数，默认是10
+    auto-commit: true # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+    pool-name: MyHikariCP # 连接池名称
+    max-lifetime: 1800000 # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+    connection-timeout: 30000 # 数据库连接超时时间,默认30秒，即30000
+    connection-test-query: SELECT 1
+feign:
+  hystrix:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+eureka:
+  instance:
+    hostname: localhost
+    status-page-url: http://${eureka.instance.hostname}:${server.port}/index
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:10086/eureka/
