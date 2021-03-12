@@ -1,7 +1,12 @@
 package com.hunter.dt.base.framework.configuration;
 
+import com.google.gson.GsonBuilder;
+import com.hunter.dt.base.common.cons.WxConstants;
+import com.hunter.dt.base.common.feign.IWxServerFeign;
+import feign.Feign;
 import feign.Logger;
 import feign.codec.Decoder;
+import feign.slf4j.Slf4jLogger;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
 import org.springframework.cloud.openfeign.support.ResponseEntityDecoder;
@@ -21,6 +26,15 @@ public class FeignConfiguration {
     Logger.Level feignLoggerLevel() {
         return Logger.Level.FULL;
     }
+
+
+//    @Bean
+//    public IWxServerFeign feignQwService() {
+//        String wxApiBaseUrl = WxConstants.WX_URI_AUTH_CODE2SESSION;
+//        GsonBuilder builder = new GsonBuilder();
+//        builder.setDateFormat("yyyy-MM-dd HH:mm:ss");
+//        return Feign.builder().target(IWxServerFeign.class, wxApiBaseUrl);
+//    }
 
 
     @Bean

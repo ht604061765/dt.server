@@ -1,13 +1,13 @@
 package com.hunter.dt.business.user.user.service.domain.vo;
 
-import com.hunter.dt.base.common.base.BaseDTO;
+import com.hunter.dt.base.common.base.BaseVo;
 import com.hunter.dt.base.common.enumerate.SexEnum;
 
 /**
  * @author Administrator
  * @date 2020/8/28
  **/
-public class UserVo extends BaseDTO {
+public class UserVo extends BaseVo {
 
     /**
      * 用户账号

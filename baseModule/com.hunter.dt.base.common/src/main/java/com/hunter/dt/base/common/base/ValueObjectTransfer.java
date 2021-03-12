@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Hunter
  * @date 2021/1/4
  */
-public class ValueObjectTransfer<PO extends BaseEntity, VO extends BaseDTO> {
+public class ValueObjectTransfer<PO extends BaseEntity, VO extends BaseVo> {
 
     /**
      * poList -> voList

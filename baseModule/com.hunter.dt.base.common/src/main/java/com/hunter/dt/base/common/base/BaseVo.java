@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 公共实体基类
  * @author Hunter
  */
-public class BaseDTO implements Serializable {
+public class BaseVo implements Serializable {
 
     /**
      * 数据主键

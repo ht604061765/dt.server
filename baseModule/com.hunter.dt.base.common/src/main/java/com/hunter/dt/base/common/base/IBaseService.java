@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author Hunter
  * @date 2021/1/4
  */
-public interface IBaseService<PO extends BaseEntity, VO extends BaseDTO> extends IService<PO> {
+public interface IBaseService<PO extends BaseEntity, VO extends BaseVo> extends IService<PO> {
 
     default ValueObjectTransfer<PO, VO> getTransfer(){
         return new ValueObjectTransfer<>();
