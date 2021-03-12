@@ -111,6 +111,12 @@ public class DateUtils {
         return c.getTimeInMillis();
     }
 
+    /**
+     * 时间戳格式化
+     * @param timeStamp 时间戳数据
+     * @param dateFormatPatternEnum 格式枚举类
+     * @return 格式化后的时间字符串
+     */
     public static String format(Long timeStamp, DateFormatPatternEnum dateFormatPatternEnum){
         SimpleDateFormat format = new SimpleDateFormat(dateFormatPatternEnum.getPattern());
         return format.format(timeStamp);

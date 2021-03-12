@@ -21,6 +21,7 @@
         <module>com.hunter.dt.business.zuul</module>
         <module>com.hunter.dt.business.eureka</module>
         <module>com.hunter.dt.business.user</module>
+        <module>com.hunter.dt.business.mall</module>
     </modules>
 
     <dependencies>

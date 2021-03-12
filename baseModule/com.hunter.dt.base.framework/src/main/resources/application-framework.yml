@@ -38,7 +38,8 @@ feign:
 eureka:
   instance:
     hostname: localhost
-    status-page-url: http://${eureka.instance.hostname}:${server.port}/index
+    port: 10086
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:10086/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+

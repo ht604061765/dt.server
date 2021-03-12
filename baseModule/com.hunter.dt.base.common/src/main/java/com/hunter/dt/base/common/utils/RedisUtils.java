@@ -23,7 +23,7 @@ public final class RedisUtils {
     /**
      * 业务数据缓存目录
      */
-    private static final String REDIS_FOLDER = "og:redis:business:";
+    private static final String REDIS_FOLDER = "dt:business:";
 
 
     //    ======================= 普通对象相关操作 =======================

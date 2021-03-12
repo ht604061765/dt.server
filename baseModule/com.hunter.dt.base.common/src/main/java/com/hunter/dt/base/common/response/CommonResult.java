@@ -7,8 +7,8 @@ import java.util.Objects;
 
 /**
  * 通用返回结果
- * @author Administrator
- * @date 2020/9/27
+ * @author Hunter
+ * @date 2021/3/12
  **/
 public class CommonResult implements Serializable {
 
