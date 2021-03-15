@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * @version 2021/01/23
  */
 @Component
-public final class RedisUtils {
+public class RedisUtils {
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
@@ -23,7 +23,7 @@ public final class RedisUtils {
     /**
      * 业务数据缓存目录
      */
-    private static final String REDIS_FOLDER = "dt:business:";
+    private static final String REDIS_FOLDER = "dt:";
 
 
     //    ======================= 普通对象相关操作 =======================
