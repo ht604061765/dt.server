@@ -27,9 +27,9 @@ public class WxUserServiceImplI extends ServiceImpl<IWxUserMapper, WxUserPo> imp
 
     @Override
     public String code2Session(String jsCode) {
-        String weChatUserStr = wxServerFeign.jscode2session(WxAppId, WxAppSecret, jsCode, GRANT_TYPE);
-        System.out.println(weChatUserStr);
-        JSONObject weChatUserVo = JSONObject.parseObject(weChatUserStr);
-        return weChatUserStr;
+        WeChatUserVo weChatUserVo = wxServerFeign.jscode2session(WxAppId, WxAppSecret, jsCode, GRANT_TYPE);
+//        System.out.println(weChatUserStr);
+//        JSONObject weChatUserVo = JSONObject.parseObject(weChatUserStr);
+        return weChatUserVo.toString();
     }
 }

@@ -1,15 +1,9 @@
 package com.hunter.dt.base.framework.configuration;
 
-import com.google.gson.GsonBuilder;
-import com.hunter.dt.base.common.cons.WxConstants;
-import com.hunter.dt.base.common.feign.IWxServerFeign;
-import feign.Feign;
 import feign.Logger;
 import feign.codec.Decoder;
-import feign.slf4j.Slf4jLogger;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
-import org.springframework.cloud.openfeign.support.ResponseEntityDecoder;
 import org.springframework.cloud.openfeign.support.SpringDecoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,30 +21,24 @@ public class FeignConfiguration {
         return Logger.Level.FULL;
     }
 
-
-//    @Bean
-//    public IWxServerFeign feignQwService() {
-//        String wxApiBaseUrl = WxConstants.WX_URI_AUTH_CODE2SESSION;
-//        GsonBuilder builder = new GsonBuilder();
-//        builder.setDateFormat("yyyy-MM-dd HH:mm:ss");
-//        return Feign.builder().target(IWxServerFeign.class, wxApiBaseUrl);
-//    }
-
-
+    /**
+     * 解决微信返回参数为[text/plain] 无法转化为json
+     */
     @Bean
-    public Decoder feignDecoder() {
-        return new ResponseEntityDecoder(new SpringDecoder(feignHttpMessageConverter()));
+    public Decoder feignDecoder(){
+        MessageConverter converter = new MessageConverter();
+        ObjectFactory<HttpMessageConverters> objectFactory = () -> new HttpMessageConverters(converter);
+        return new SpringDecoder(objectFactory);
     }
 
-    public ObjectFactory<HttpMessageConverters> feignHttpMessageConverter() {
-        final HttpMessageConverters httpMessageConverters = new HttpMessageConverters(new converter());
-        return () -> httpMessageConverters;
-    }
-
-    public class converter extends MappingJackson2HttpMessageConverter {
-        converter(){
+    /**
+     * 解析器配置
+     */
+    public static class MessageConverter extends MappingJackson2HttpMessageConverter {
+        MessageConverter(){
             List<MediaType> mediaTypes = new ArrayList<>();
-            mediaTypes.add(MediaType.valueOf(MediaType.TEXT_HTML_VALUE + ";charset=UTF-8")); //关键
+            mediaTypes.add(MediaType.TEXT_PLAIN);
+            mediaTypes.add(MediaType.valueOf(MediaType.TEXT_HTML_VALUE + ";charset=UTF-8"));
             setSupportedMediaTypes(mediaTypes);
         }
     }
