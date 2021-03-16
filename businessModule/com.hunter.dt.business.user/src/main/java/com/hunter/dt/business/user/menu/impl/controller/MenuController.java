@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Api(tags = "菜单管理")
 @RestController
-@RequestMapping("/Menu")
+@RequestMapping("/menu")
 public class MenuController extends BaseController<IMenuService> {
 
 
