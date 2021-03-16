@@ -5,11 +5,16 @@ import com.hunter.dt.base.common.base.BaseEntity;
 import com.hunter.dt.base.common.enumerate.SexEnum;
 
 /**
- * @author Administrator
- * @date 2020/8/28
+ * @author Hunter
+ * @date 2021/3/16
  **/
 @TableName("T_DT_USER")
 public class UserPo extends BaseEntity {
+
+    /**
+     * 名称
+     */
+    private String nickName;
 
     /**
      * 用户账号
@@ -22,9 +27,9 @@ public class UserPo extends BaseEntity {
     private String password;
 
     /**
-     * 名称
+     * 性别
      */
-    private String name;
+    private SexEnum sex;
 
     /**
      * 手机号码
@@ -32,9 +37,17 @@ public class UserPo extends BaseEntity {
     private String phone;
 
     /**
-     * 性别
+     * 邮箱
      */
-    private SexEnum sex;
+    private SexEnum email;
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
     public String getAccount() {
         return account;
@@ -52,12 +65,12 @@ public class UserPo extends BaseEntity {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public SexEnum getSex() {
+        return sex;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSex(SexEnum sex) {
+        this.sex = sex;
     }
 
     public String getPhone() {
@@ -68,11 +81,11 @@ public class UserPo extends BaseEntity {
         this.phone = phone;
     }
 
-    public SexEnum getSex() {
-        return sex;
+    public SexEnum getEmail() {
+        return email;
     }
 
-    public void setSex(SexEnum sex) {
-        this.sex = sex;
+    public void setEmail(SexEnum email) {
+        this.email = email;
     }
 }

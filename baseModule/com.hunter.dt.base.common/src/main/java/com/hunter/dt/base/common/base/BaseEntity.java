@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.hunter.dt.base.common.enumerate.DataStatusEnum;
 
 import java.io.Serializable;
 
@@ -31,6 +32,12 @@ public class BaseEntity implements Serializable {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updateTime;
 
+    /**
+     * 数据状态枚举
+     */
+    @TableField(fill = FieldFill.INSERT)
+    private DataStatusEnum dataStatusEnum;
+
     public String getId() {
         return id;
     }
@@ -55,4 +62,11 @@ public class BaseEntity implements Serializable {
         this.updateTime = updateTime;
     }
 
+    public DataStatusEnum getDataStatusEnum() {
+        return dataStatusEnum;
+    }
+
+    public void setDataStatusEnum(DataStatusEnum dataStatusEnum) {
+        this.dataStatusEnum = dataStatusEnum;
+    }
 }

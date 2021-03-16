@@ -1,5 +1,7 @@
 package com.hunter.dt.base.common.base;
 
+import com.hunter.dt.base.common.enumerate.DataStatusEnum;
+
 import java.io.Serializable;
 
 /**
@@ -22,6 +24,16 @@ public class BaseVo implements Serializable {
      * 更新时间
      */
     private Long updateTime;
+
+    /**
+     * 数据状态枚举
+     */
+    private DataStatusEnum dataStatusEnum;
+
+    /**
+     * 数据状态名称
+     */
+    private String dataStatusName;
 
     public String getId() {
         return id;
@@ -47,4 +59,19 @@ public class BaseVo implements Serializable {
         this.updateTime = updateTime;
     }
 
+    public DataStatusEnum getDataStatusEnum() {
+        return dataStatusEnum;
+    }
+
+    public void setDataStatusEnum(DataStatusEnum dataStatusEnum) {
+        this.dataStatusEnum = dataStatusEnum;
+    }
+
+    public String getDataStatusName() {
+        return dataStatusName;
+    }
+
+    public void setDataStatusName(String dataStatusName) {
+        this.dataStatusName = dataStatusName;
+    }
 }

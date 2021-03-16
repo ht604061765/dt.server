@@ -6,6 +6,10 @@ import com.hunter.dt.business.user.user.service.domain.vo.UserVo;
 
 import java.util.List;
 
+/**
+ * @author Hunter
+ * @date 2021/3/16
+ **/
 public interface IUserService extends IBaseService<UserPo, UserVo> {
 
     /**

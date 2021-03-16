@@ -4,8 +4,8 @@ import com.hunter.dt.base.common.base.BaseVo;
 import com.hunter.dt.base.common.enumerate.SexEnum;
 
 /**
- * @author Administrator
- * @date 2020/8/28
+ * @author Hunter
+ * @date 2021/3/16
  **/
 public class UserVo extends BaseVo {
 
@@ -22,12 +22,17 @@ public class UserVo extends BaseVo {
     /**
      * 名称
      */
-    private String name;
+    private String nickName;
 
     /**
      * 手机号码
      */
     private String phone;
+
+    /**
+     * 邮箱
+     */
+    private SexEnum email;
 
     /**
      * 性别
@@ -55,12 +60,12 @@ public class UserVo extends BaseVo {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getPhone() {
@@ -85,5 +90,13 @@ public class UserVo extends BaseVo {
 
     public void setSexName(String sexName) {
         this.sexName = sexName;
+    }
+
+    public SexEnum getEmail() {
+        return email;
+    }
+
+    public void setEmail(SexEnum email) {
+        this.email = email;
     }
 }
