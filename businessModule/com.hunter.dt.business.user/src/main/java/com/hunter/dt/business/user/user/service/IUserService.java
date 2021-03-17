@@ -6,8 +6,6 @@ import com.hunter.dt.business.user.user.service.domain.po.UserPo;
 import com.hunter.dt.business.user.user.service.domain.vo.UserSearchParamVo;
 import com.hunter.dt.business.user.user.service.domain.vo.UserVo;
 
-import java.util.List;
-
 /**
  * @author Hunter
  * @date 2021/3/16
