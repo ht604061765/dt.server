@@ -14,10 +14,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController extends BaseController<IUserService> {
 
-    @ApiOperation(value="获取用户列表")
-    @GetMapping("/findUserList")
-    public CommonResult findUserList(){
-        return CommonResult.SUCCESS(getService().findUserList());
-    }
-
 }

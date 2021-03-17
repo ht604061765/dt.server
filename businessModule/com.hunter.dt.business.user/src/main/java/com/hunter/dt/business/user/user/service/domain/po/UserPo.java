@@ -40,7 +40,7 @@ public class UserPo extends BaseEntity {
     /**
      * 邮箱
      */
-    private SexEnum email;
+    private String email;
 
     public String getNickName() {
         return nickName;
@@ -82,11 +82,11 @@ public class UserPo extends BaseEntity {
         this.phone = phone;
     }
 
-    public SexEnum getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(SexEnum email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 }

@@ -33,7 +33,7 @@ public class UserVo extends BaseVo {
     /**
      * 邮箱
      */
-    private SexEnum email;
+    private String email;
 
     /**
      * 性别
@@ -93,11 +93,11 @@ public class UserVo extends BaseVo {
         this.sexName = sexName;
     }
 
-    public SexEnum getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(SexEnum email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 }

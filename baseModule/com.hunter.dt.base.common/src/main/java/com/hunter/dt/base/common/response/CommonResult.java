@@ -12,10 +12,19 @@ import java.util.Objects;
  **/
 public class CommonResult implements Serializable {
 
+    /**
+     * 结果代码
+     */
     private int code = ResultCode.SUCCESS.code;
 
+    /**
+     * 数据对象
+     */
     private Object data;
 
+    /**
+     * 消息文本
+     */
     private String msg;
 
     public static CommonResult SUCCESS(Object data){
