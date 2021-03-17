@@ -5,6 +5,7 @@ import com.hunter.dt.base.common.base.BaseEntity;
 import com.hunter.dt.base.common.enumerate.SexEnum;
 
 /**
+ * 人员信息表
  * @author Hunter
  * @date 2021/3/16
  **/

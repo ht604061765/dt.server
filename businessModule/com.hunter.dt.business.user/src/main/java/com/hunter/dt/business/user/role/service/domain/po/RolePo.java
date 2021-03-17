@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.hunter.dt.base.common.base.BaseEntity;
 
 /**
+ * 角色表
  * @author Hunter
  * @date 2021/3/16
  **/

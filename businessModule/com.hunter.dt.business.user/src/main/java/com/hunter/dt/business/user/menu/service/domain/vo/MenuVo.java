@@ -4,6 +4,7 @@ import com.hunter.dt.base.common.base.BaseVo;
 import com.hunter.dt.business.user.menu.service.enumerate.OpenTypeEnum;
 
 /**
+ * 菜单Vo
  * @author Hunter
  * @date 2021/3/16
  **/

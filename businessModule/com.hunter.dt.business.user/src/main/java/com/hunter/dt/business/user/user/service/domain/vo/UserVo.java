@@ -4,6 +4,7 @@ import com.hunter.dt.base.common.base.BaseVo;
 import com.hunter.dt.base.common.enumerate.SexEnum;
 
 /**
+ * 人员信息 Vo
  * @author Hunter
  * @date 2021/3/16
  **/
